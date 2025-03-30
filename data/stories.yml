@@ -1,0 +1,48 @@
+version: "3.1"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+- story: Ask Gemini
+  steps:
+  - intent: ask_gemini
+  - action: action_use_gemini  # This ensures the action is called
+  
+- story: Control Mixer
+  steps:
+  - intent: control_mixer
+  - action: action_control_mixer  # Ensures the action is executed
+- story: User asks about bot capabilities
+  steps:
+  - intent: ask_gemini
+  - action: action_use_gemini
+- story: Handle unknown queries with Gemini
+  steps:
+   - intent: ask_gemini
+   - action: action_ask_gemini

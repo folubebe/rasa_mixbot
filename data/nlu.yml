@@ -1,0 +1,144 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+- intent: control_mixer
+  examples: |
+      - Mute channel 1
+      - Unmute the first channel
+      - Set volume to 0.7
+      - Increase fader to 0.9
+      - Decrease volume to [0.3](volume)
+      - Set fader to [0.5](volume)
+      - Solo channel 3
+      - Clear solo
+      - Enable gate on channel 7
+      - Set gate threshold to minus 40 db
+      - Turn on compressor for channel 8
+      - Enable equalizer on channel 9
+      - Turn on phantom power for channel 10
+      - Load keyboard preset on channel 1
+      - Load drums preset on channel 2
+      - Set channels 1 through 4 to minus 10 db
+      - Gain stage channels 5 to 8
+      - Mute channels 3 and 4
+      - Decrease threshold by 6 db
+      - Boost gain on the kick drum
+      - Turn down the snare volume
+      - Select channel 2
+      - Adjust gain on channel 5 by 3db
+      - Reduce level by 5db
+      - Increase gain by 3 db on channel 5
+      - Turn down the volume on channel 6
+      - Set fader on channel 4 to minus twenty db
+      - Gain stage on channel 6
+      - Gain stage on channel kick
+      - Gain stage on channel snare
+      - Gain stage channel 1 to 4
+      - gain stage channel 1 through 5
+      - gain stage channel 2-6
+
+- intent: ask_gemini
+  examples: |
+    - How do I optimize sound settings?
+    - What's the best EQ for vocals?
+    - Suggest the best compressor settings
+    - What can you do?
+    - Tell me about yourself.
+    - How can you assist me?
+    - Explain your features.
+    - Who made you?
+    - Any advice for me?
+    - Help me with something.
+    - What can you do?
+    - Tell me about yourself.
+    - Who made you?
+    - [ANY QUESTION](unknown)
